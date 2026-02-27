@@ -1,0 +1,339 @@
+{
+  "model_version": "1.0",
+  "trained_on": "540 synthetic examples (90 per intent)",
+  "intents": [
+    "term",
+    "child",
+    "family",
+    "health",
+    "business",
+    "investment"
+  ],
+  "top1_accuracy": 88.0,
+  "top3_accuracy": 90.7,
+  "system_prompt": "You are an expert insurance policy recommender with deep knowledge of client profiling.\nYou have been trained on 540 synthetic client profiles and know exactly which policies maximise both client fit and agent commission.\n\n## POLICY DATABASE\n[\n  {\n    \"id\": \"FSP001\",\n    \"name\": \"Family Shield Plus\",\n    \"type\": \"family\",\n    \"premium_annual\": 1200,\n    \"coverage\": 500000,\n    \"profit_score\": 85,\n    \"claim_settlement\": 98.2,\n    \"min_age\": 18,\n    \"max_age\": 65,\n    \"highlights\": [\n      \"Life cover up to $500K\",\n      \"Accidental death benefit\",\n      \"Critical illness rider\"\n    ],\n    \"ideal_for\": \"Families with young children and sole earners\"\n  },\n  {\n    \"id\": \"FGP002\",\n    \"name\": \"Family Guardian Plan\",\n    \"type\": \"family\",\n    \"premium_annual\": 850,\n    \"coverage\": 300000,\n    \"profit_score\": 72,\n    \"claim_settlement\": 96.5,\n    \"min_age\": 21,\n    \"max_age\": 60,\n    \"highlights\": [\n      \"Flexible monthly payments\",\n      \"Spouse rider included\",\n      \"Education benefit for kids\"\n    ],\n    \"ideal_for\": \"Young couples starting a family\"\n  },\n  {\n    \"id\": \"FEP003\",\n    \"name\": \"Family Elite Protect\",\n    \"type\": \"family\",\n    \"premium_annual\": 2200,\n    \"coverage\": 1000000,\n    \"profit_score\": 92,\n    \"claim_settlement\": 99.1,\n    \"min_age\": 25,\n    \"max_age\": 55,\n    \"highlights\": [\n      \"$1M total coverage\",\n      \"Whole life + savings\",\n      \"Legacy planning benefit\"\n    ],\n    \"ideal_for\": \"High-income families seeking comprehensive protection\"\n  },\n  {\n    \"id\": \"HSP004\",\n    \"name\": \"Health Secure Pro\",\n    \"type\": \"health\",\n    \"premium_annual\": 980,\n    \"coverage\": 200000,\n    \"profit_score\": 90,\n    \"claim_settlement\": 97.8,\n    \"min_age\": 18,\n    \"max_age\": 65,\n    \"highlights\": [\n      \"Zero co-pay\",\n      \"Cashless at 10,000+ hospitals\",\n      \"Mental health cover\"\n    ],\n    \"ideal_for\": \"Individuals wanting complete health protection\"\n  },\n  {\n    \"id\": \"HBC005\",\n    \"name\": \"Health Basic Care\",\n    \"type\": \"health\",\n    \"premium_annual\": 500,\n    \"coverage\": 100000,\n    \"profit_score\": 65,\n    \"claim_settlement\": 95.0,\n    \"min_age\": 18,\n    \"max_age\": 45,\n    \"highlights\": [\n      \"OPD benefits\",\n      \"Day-care procedures\",\n      \"Annual health checkup\"\n    ],\n    \"ideal_for\": \"Young professionals on a budget\"\n  },\n  {\n    \"id\": \"SSH006\",\n    \"name\": \"Senior Health Shield\",\n    \"type\": \"health\",\n    \"premium_annual\": 1800,\n    \"coverage\": 300000,\n    \"profit_score\": 88,\n    \"claim_settlement\": 96.9,\n    \"min_age\": 55,\n    \"max_age\": 80,\n    \"highlights\": [\n      \"Pre-existing disease cover\",\n      \"Home healthcare\",\n      \"Domiciliary cover\"\n    ],\n    \"ideal_for\": \"Senior citizens and retirees\"\n  },\n  {\n    \"id\": \"CIG007\",\n    \"name\": \"Critical Illness Guard\",\n    \"type\": \"health\",\n    \"premium_annual\": 1200,\n    \"coverage\": 500000,\n    \"profit_score\": 93,\n    \"claim_settlement\": 98.5,\n    \"min_age\": 20,\n    \"max_age\": 65,\n    \"highlights\": [\n      \"Covers 40+ illnesses\",\n      \"Lump-sum on diagnosis\",\n      \"Income replacement\"\n    ],\n    \"ideal_for\": \"Anyone with family history of critical illness\"\n  },\n  {\n    \"id\": \"IGP008\",\n    \"name\": \"Investment Growth Plan\",\n    \"type\": \"investment\",\n    \"premium_annual\": 2000,\n    \"coverage\": 1000000,\n    \"profit_score\": 95,\n    \"claim_settlement\": 99.0,\n    \"min_age\": 18,\n    \"max_age\": 50,\n    \"highlights\": [\n      \"12% avg annual returns\",\n      \"Market-linked growth\",\n      \"Life cover included\"\n    ],\n    \"ideal_for\": \"Long-term investors aged 25-45\"\n  },\n  {\n    \"id\": \"WBP009\",\n    \"name\": \"Wealth Builder Policy\",\n    \"type\": \"investment\",\n    \"premium_annual\": 1500,\n    \"coverage\": 750000,\n    \"profit_score\": 80,\n    \"claim_settlement\": 98.1,\n    \"min_age\": 25,\n    \"max_age\": 55,\n    \"highlights\": [\n      \"Guaranteed bonuses\",\n      \"Maturity benefit\",\n      \"Tax-free returns\"\n    ],\n    \"ideal_for\": \"Conservative investors wanting safety + growth\"\n  },\n  {\n    \"id\": \"RIP010\",\n    \"name\": \"Retirement Income Plus\",\n    \"type\": \"investment\",\n    \"premium_annual\": 3000,\n    \"coverage\": 2000000,\n    \"profit_score\": 97,\n    \"claim_settlement\": 99.5,\n    \"min_age\": 35,\n    \"max_age\": 65,\n    \"highlights\": [\n      \"Lifelong monthly pension\",\n      \"Spouse continuation benefit\",\n      \"Top-up option\"\n    ],\n    \"ideal_for\": \"Clients aged 40+ planning for retirement\"\n  },\n  {\n    \"id\": \"CFS011\",\n    \"name\": \"Child Future Secure\",\n    \"type\": \"child\",\n    \"premium_annual\": 900,\n    \"coverage\": 200000,\n    \"profit_score\": 82,\n    \"claim_settlement\": 97.3,\n    \"min_age\": 21,\n    \"max_age\": 50,\n    \"highlights\": [\n      \"Matures at child age 18\",\n      \"Waiver on parent death\",\n      \"Guaranteed education fund\"\n    ],\n    \"ideal_for\": \"Parents with children aged 0-12\"\n  },\n  {\n    \"id\": \"CGP012\",\n    \"name\": \"Child Genius Plan\",\n    \"type\": \"child\",\n    \"premium_annual\": 1400,\n    \"coverage\": 400000,\n    \"profit_score\": 88,\n    \"claim_settlement\": 98.0,\n    \"min_age\": 21,\n    \"max_age\": 45,\n    \"highlights\": [\n      \"Milestone payouts at 16/18/21\",\n      \"Marriage corpus included\",\n      \"Parent death waiver\"\n    ],\n    \"ideal_for\": \"Parents planning long-term for child's future\"\n  },\n  {\n    \"id\": \"BCS013\",\n    \"name\": \"Business Continuity Shield\",\n    \"type\": \"business\",\n    \"premium_annual\": 5000,\n    \"coverage\": 5000000,\n    \"profit_score\": 96,\n    \"claim_settlement\": 99.2,\n    \"min_age\": 25,\n    \"max_age\": 60,\n    \"highlights\": [\n      \"Keyman insurance\",\n      \"Business loan cover\",\n      \"Partner buy-out benefit\"\n    ],\n    \"ideal_for\": \"Business owners, entrepreneurs, SME founders\"\n  },\n  {\n    \"id\": \"SPP014\",\n    \"name\": \"SME Protect Plus\",\n    \"type\": \"business\",\n    \"premium_annual\": 2500,\n    \"coverage\": 2000000,\n    \"profit_score\": 84,\n    \"claim_settlement\": 96.8,\n    \"min_age\": 21,\n    \"max_age\": 60,\n    \"highlights\": [\n      \"Employee group health cover\",\n      \"Business asset protection\",\n      \"Liability coverage\"\n    ],\n    \"ideal_for\": \"Small business owners with 5-50 employees\"\n  },\n  {\n    \"id\": \"TLM015\",\n    \"name\": \"Term Life Max\",\n    \"type\": \"term\",\n    \"premium_annual\": 600,\n    \"coverage\": 1000000,\n    \"profit_score\": 70,\n    \"claim_settlement\": 97.0,\n    \"min_age\": 18,\n    \"max_age\": 55,\n    \"highlights\": [\n      \"Lowest premium\",\n      \"Maximum life cover\",\n      \"Return of premium option\"\n    ],\n    \"ideal_for\": \"Young earners wanting pure life protection\"\n  },\n  {\n    \"id\": \"TPR016\",\n    \"name\": \"Term Plus Rider Bundle\",\n    \"type\": \"term\",\n    \"premium_annual\": 950,\n    \"coverage\": 1500000,\n    \"profit_score\": 78,\n    \"claim_settlement\": 97.6,\n    \"min_age\": 18,\n    \"max_age\": 55,\n    \"highlights\": [\n      \"3 riders included\",\n      \"Disability income benefit\",\n      \"Accidental death double payout\"\n    ],\n    \"ideal_for\": \"Breadwinners wanting all-in-one protection\"\n  }\n]\n\n## LEARNED PATTERNS (from training data)\n- For TERM clients: 'Term Plus Rider Bundle' is most frequently optimal (profit_score=78, claim=97.6%)\n- For CHILD clients: 'Child Genius Plan' is most frequently optimal (profit_score=88, claim=98.0%)\n- For FAMILY clients: 'Family Elite Protect' is most frequently optimal (profit_score=92, claim=99.1%)\n- For HEALTH clients: 'Critical Illness Guard' is most frequently optimal (profit_score=93, claim=98.5%)\n- For BUSINESS clients: 'Business Continuity Shield' is most frequently optimal (profit_score=96, claim=99.2%)\n- For INVESTMENT clients: 'Retirement Income Plus' is most frequently optimal (profit_score=97, claim=99.5%)\n\n## SCORING FORMULA (use this to rank policies)\nfit_score = (profit_score \u00d7 0.40) + (claim_settlement \u00d7 0.20) + age_fit_bonus(15) + budget_fit_bonus(15) + coverage_value_bonus(10)\n\n## RULES\n1. ALWAYS check age eligibility (min_age \u2264 client_age \u2264 max_age). A policy outside age range scores -20.\n2. ALWAYS check budget fit. Annual premium \u00f7 12 must be \u2264 monthly_budget \u00d7 1.3. Else score -15.\n3. Rank by fit_score descending. Top = best recommendation.\n4. If client mentions specific concerns (hospital, family, retirement), weight matching policy type +10.\n5. Return ONLY valid JSON \u2014 no markdown, no explanation outside the JSON.\n\n## OUTPUT FORMAT\nReturn exactly this JSON structure:\n{\n  \"top_policy_id\":      \"<policy ID>\",\n  \"top_policy_name\":    \"<policy name>\",\n  \"ranked_policy_ids\":  [\"<id1>\", \"<id2>\", \"<id3>\"],\n  \"ranked_policy_names\":[\"<name1>\", \"<name2>\", \"<name3>\"],\n  \"fit_scores\":         {\"<id>\": <score>, ...},\n  \"reasoning\":          \"<2-3 sentences explaining the top recommendation>\",\n  \"key_factors\":        {\"age_fit\": true/false, \"budget_fit\": true/false, \"profit_score\": <n>, \"claim_rate\": <n>}\n}",
+  "few_shot_examples": {
+    "term": [
+      {
+        "conversation": "Spoke to Shobha (40, fresh graduate). term plan only, no investment needed. Monthly premium budget: Rs.1120.",
+        "output": {
+          "top_policy_id": "TPR016",
+          "top_policy_name": "Term Plus Rider Bundle",
+          "ranked": [
+            {
+              "id": "TPR016",
+              "name": "Term Plus Rider Bundle",
+              "fit_score": 83.9
+            },
+            {
+              "id": "TLM015",
+              "name": "Term Life Max",
+              "fit_score": 80.7
+            }
+          ],
+          "reasoning": "Based on Shobha's profile as a 40-year-old fresh graduate with a monthly budget of Rs.1120, the best match is Term Plus Rider Bundle. Age 40 falls within the eligible range (18-55). Annual premium of Rs.950 (Rs.79/month) fits the budget. Profit score of 78/100 and 97.6% claim settlement make this the strongest recommendation for a term client. Alternative: Term Life Max at Rs.600/year if the client needs a lower premium option."
+        }
+      },
+      {
+        "conversation": "Meena came in today, age 41. Currently a fresh graduate. Main issue: want cheapest life insurance possible. Can spare Rs.1368/month.",
+        "output": {
+          "top_policy_id": "TPR016",
+          "top_policy_name": "Term Plus Rider Bundle",
+          "ranked": [
+            {
+              "id": "TPR016",
+              "name": "Term Plus Rider Bundle",
+              "fit_score": 83.9
+            },
+            {
+              "id": "TLM015",
+              "name": "Term Life Max",
+              "fit_score": 80.7
+            }
+          ],
+          "reasoning": "Based on Meena's profile as a 41-year-old fresh graduate with a monthly budget of Rs.1368, the best match is Term Plus Rider Bundle. Age 41 falls within the eligible range (18-55). Annual premium of Rs.950 (Rs.79/month) fits the budget. Profit score of 78/100 and 97.6% claim settlement make this the strongest recommendation for a term client. Alternative: Term Life Max at Rs.600/year if the client needs a lower premium option."
+        }
+      }
+    ],
+    "child": [
+      {
+        "conversation": "My client Sunita is 41 years old, works as a small business owner. want guaranteed money when child turns 18. Monthly budget around Rs.1667.",
+        "output": {
+          "top_policy_id": "CGP012",
+          "top_policy_name": "Child Genius Plan",
+          "ranked": [
+            {
+              "id": "CGP012",
+              "name": "Child Genius Plan",
+              "fit_score": 85.4
+            },
+            {
+              "id": "CFS011",
+              "name": "Child Future Secure",
+              "fit_score": 82.7
+            }
+          ],
+          "reasoning": "Based on Sunita's profile as a 41-year-old small business owner with a monthly budget of Rs.1667, the best match is Child Genius Plan. Age 41 falls within the eligible range (21-45). Annual premium of Rs.1,400 (Rs.117/month) fits the budget. Profit score of 88/100 and 98.0% claim settlement make this the strongest recommendation for a child client. Alternative: Child Future Secure at Rs.900/year if the client needs a lower premium option."
+        }
+      },
+      {
+        "conversation": "Client: Shobha, Age 29. Occupation: civil servant. Main concern: want waiver benefit if something happens to me. Budget: Rs.3310/month.",
+        "output": {
+          "top_policy_id": "CGP012",
+          "top_policy_name": "Child Genius Plan",
+          "ranked": [
+            {
+              "id": "CGP012",
+              "name": "Child Genius Plan",
+              "fit_score": 85.4
+            },
+            {
+              "id": "CFS011",
+              "name": "Child Future Secure",
+              "fit_score": 82.7
+            }
+          ],
+          "reasoning": "Based on Shobha's profile as a 29-year-old civil servant with a monthly budget of Rs.3310, the best match is Child Genius Plan. Age 29 falls within the eligible range (21-45). Annual premium of Rs.1,400 (Rs.117/month) fits the budget. Profit score of 88/100 and 98.0% claim settlement make this the strongest recommendation for a child client. Alternative: Child Future Secure at Rs.900/year if the client needs a lower premium option."
+        }
+      }
+    ],
+    "family": [
+      {
+        "conversation": "Spoke to Amit (44, bank employee). concerned about my family's financial future. Monthly premium budget: Rs.1266.",
+        "output": {
+          "top_policy_id": "FEP003",
+          "top_policy_name": "Family Elite Protect",
+          "ranked": [
+            {
+              "id": "FEP003",
+              "name": "Family Elite Protect",
+              "fit_score": 87.5
+            },
+            {
+              "id": "FSP001",
+              "name": "Family Shield Plus",
+              "fit_score": 84.5
+            },
+            {
+              "id": "FGP002",
+              "name": "Family Guardian Plan",
+              "fit_score": 78.8
+            }
+          ],
+          "reasoning": "Based on Amit's profile as a 44-year-old bank employee with a monthly budget of Rs.1266, the best match is Family Elite Protect. Age 44 falls within the eligible range (25-55). Annual premium of Rs.2,200 (Rs.183/month) fits the budget. Profit score of 92/100 and 99.1% claim settlement make this the strongest recommendation for a family client. Alternative: Family Shield Plus at Rs.1,200/year if the client needs a lower premium option."
+        }
+      },
+      {
+        "conversation": "Client profile - Name: Dev, Age: 27, Job: nurse. Says: recently had a baby, need family protection. Budget Rs.1380/month.",
+        "output": {
+          "top_policy_id": "FEP003",
+          "top_policy_name": "Family Elite Protect",
+          "ranked": [
+            {
+              "id": "FEP003",
+              "name": "Family Elite Protect",
+              "fit_score": 87.5
+            },
+            {
+              "id": "FSP001",
+              "name": "Family Shield Plus",
+              "fit_score": 84.5
+            },
+            {
+              "id": "FGP002",
+              "name": "Family Guardian Plan",
+              "fit_score": 78.8
+            }
+          ],
+          "reasoning": "Based on Dev's profile as a 27-year-old nurse with a monthly budget of Rs.1380, the best match is Family Elite Protect. Age 27 falls within the eligible range (25-55). Annual premium of Rs.2,200 (Rs.183/month) fits the budget. Profit score of 92/100 and 99.1% claim settlement make this the strongest recommendation for a family client. Alternative: Family Shield Plus at Rs.1,200/year if the client needs a lower premium option."
+        }
+      }
+    ],
+    "health": [
+      {
+        "conversation": "Kiran came in today, age 31. Currently a construction worker. Main issue: family history of heart disease and cancer. Can spare Rs.1351/month.",
+        "output": {
+          "top_policy_id": "CIG007",
+          "top_policy_name": "Critical Illness Guard",
+          "ranked": [
+            {
+              "id": "CIG007",
+              "name": "Critical Illness Guard",
+              "fit_score": 87.7
+            },
+            {
+              "id": "HSP004",
+              "name": "Health Secure Pro",
+              "fit_score": 86.0
+            },
+            {
+              "id": "HBC005",
+              "name": "Health Basic Care",
+              "fit_score": 75.4
+            }
+          ],
+          "reasoning": "Based on Kiran's profile as a 31-year-old construction worker with a monthly budget of Rs.1351, the best match is Critical Illness Guard. Age 31 falls within the eligible range (20-65). Annual premium of Rs.1,200 (Rs.100/month) fits the budget. Profit score of 93/100 and 98.5% claim settlement make this the strongest recommendation for a health client. Alternative: Health Secure Pro at Rs.980/year if the client needs a lower premium option."
+        }
+      },
+      {
+        "conversation": "Spoke to Gopal (33, senior citizen). I have diabetes and need good health cover. Monthly premium budget: Rs.712.",
+        "output": {
+          "top_policy_id": "CIG007",
+          "top_policy_name": "Critical Illness Guard",
+          "ranked": [
+            {
+              "id": "CIG007",
+              "name": "Critical Illness Guard",
+              "fit_score": 87.7
+            },
+            {
+              "id": "HSP004",
+              "name": "Health Secure Pro",
+              "fit_score": 86.0
+            },
+            {
+              "id": "HBC005",
+              "name": "Health Basic Care",
+              "fit_score": 75.4
+            }
+          ],
+          "reasoning": "Based on Gopal's profile as a 33-year-old senior citizen with a monthly budget of Rs.712, the best match is Critical Illness Guard. Age 33 falls within the eligible range (20-65). Annual premium of Rs.1,200 (Rs.100/month) fits the budget. Profit score of 93/100 and 98.5% claim settlement make this the strongest recommendation for a health client. Alternative: Health Secure Pro at Rs.980/year if the client needs a lower premium option."
+        }
+      }
+    ],
+    "business": [
+      {
+        "conversation": "Client: Deepa, Age 58. Occupation: trader. Main concern: I run a small business with 15 employees. Budget: Rs.3202/month.",
+        "output": {
+          "top_policy_id": "BCS013",
+          "top_policy_name": "Business Continuity Shield",
+          "ranked": [
+            {
+              "id": "BCS013",
+              "name": "Business Continuity Shield",
+              "fit_score": 90.2
+            },
+            {
+              "id": "SPP014",
+              "name": "SME Protect Plus",
+              "fit_score": 84.6
+            }
+          ],
+          "reasoning": "Based on Deepa's profile as a 58-year-old trader with a monthly budget of Rs.3202, the best match is Business Continuity Shield. Age 58 falls within the eligible range (25-60). Annual premium of Rs.5,000 (Rs.417/month) fits the budget. Profit score of 96/100 and 99.2% claim settlement make this the strongest recommendation for a business client. Alternative: SME Protect Plus at Rs.2,500/year if the client needs a lower premium option."
+        }
+      },
+      {
+        "conversation": "Client profile - Name: Harish, Age: 40, Job: IT startup founder. Says: business loan needs to be covered. Budget Rs.3130/month.",
+        "output": {
+          "top_policy_id": "BCS013",
+          "top_policy_name": "Business Continuity Shield",
+          "ranked": [
+            {
+              "id": "BCS013",
+              "name": "Business Continuity Shield",
+              "fit_score": 90.2
+            },
+            {
+              "id": "SPP014",
+              "name": "SME Protect Plus",
+              "fit_score": 84.6
+            }
+          ],
+          "reasoning": "Based on Harish's profile as a 40-year-old IT startup founder with a monthly budget of Rs.3130, the best match is Business Continuity Shield. Age 40 falls within the eligible range (25-60). Annual premium of Rs.5,000 (Rs.417/month) fits the budget. Profit score of 96/100 and 99.2% claim settlement make this the strongest recommendation for a business client. Alternative: SME Protect Plus at Rs.2,500/year if the client needs a lower premium option."
+        }
+      }
+    ],
+    "investment": [
+      {
+        "conversation": "Client: Gopal, Age 47. Occupation: business analyst. Main concern: looking for market-linked insurance plan. Budget: Rs.4026/month.",
+        "output": {
+          "top_policy_id": "RIP010",
+          "top_policy_name": "Retirement Income Plus",
+          "ranked": [
+            {
+              "id": "RIP010",
+              "name": "Retirement Income Plus",
+              "fit_score": 90.0
+            },
+            {
+              "id": "IGP008",
+              "name": "Investment Growth Plan",
+              "fit_score": 88.8
+            },
+            {
+              "id": "WBP009",
+              "name": "Wealth Builder Policy",
+              "fit_score": 82.6
+            }
+          ],
+          "reasoning": "Based on Gopal's profile as a 47-year-old business analyst with a monthly budget of Rs.4026, the best match is Retirement Income Plus. Age 47 falls within the eligible range (35-65). Annual premium of Rs.3,000 (Rs.250/month) fits the budget. Profit score of 97/100 and 99.5% claim settlement make this the strongest recommendation for a investment client. Alternative: Investment Growth Plan at Rs.2,000/year if the client needs a lower premium option."
+        }
+      },
+      {
+        "conversation": "Mohan, 44, architect. need something better than mutual funds with insurance. Can pay Rs.8524 per month as premium.",
+        "output": {
+          "top_policy_id": "RIP010",
+          "top_policy_name": "Retirement Income Plus",
+          "ranked": [
+            {
+              "id": "RIP010",
+              "name": "Retirement Income Plus",
+              "fit_score": 90.0
+            },
+            {
+              "id": "IGP008",
+              "name": "Investment Growth Plan",
+              "fit_score": 88.8
+            },
+            {
+              "id": "WBP009",
+              "name": "Wealth Builder Policy",
+              "fit_score": 82.6
+            }
+          ],
+          "reasoning": "Based on Mohan's profile as a 44-year-old architect with a monthly budget of Rs.8524, the best match is Retirement Income Plus. Age 44 falls within the eligible range (35-65). Annual premium of Rs.3,000 (Rs.250/month) fits the budget. Profit score of 97/100 and 99.5% claim settlement make this the strongest recommendation for a investment client. Alternative: Investment Growth Plan at Rs.2,000/year if the client needs a lower premium option."
+        }
+      }
+    ]
+  },
+  "learned_patterns": {
+    "term": {
+      "top_policy": "TPR016",
+      "distribution": {
+        "TPR016": 90
+      }
+    },
+    "child": {
+      "top_policy": "CGP012",
+      "distribution": {
+        "CGP012": 90
+      }
+    },
+    "family": {
+      "top_policy": "FEP003",
+      "distribution": {
+        "FEP003": 90
+      }
+    },
+    "health": {
+      "top_policy": "CIG007",
+      "distribution": {
+        "CIG007": 80,
+        "SSH006": 10
+      }
+    },
+    "business": {
+      "top_policy": "BCS013",
+      "distribution": {
+        "BCS013": 90
+      }
+    },
+    "investment": {
+      "top_policy": "RIP010",
+      "distribution": {
+        "RIP010": 66,
+        "IGP008": 24
+      }
+    }
+  }
+}
